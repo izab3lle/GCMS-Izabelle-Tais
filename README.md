@@ -6,5 +6,5 @@ Repositório pessoal da disciplina de GCMS do IFPE-Recife, 2025.2!
 
 Coloque seu nome abaixo se você é um dos colaboradores do repositório:
 
-* Izabelle Tais (@izab3lle, colaboradora)
+* Izabelle Tais (@izab3lle)
 * Ramide Dantas (@ramidedantas)
