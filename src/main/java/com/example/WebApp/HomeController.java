@@ -17,6 +17,11 @@ public class HomeController {
 	
 	@RequestMapping("/axolotl")
 	public @ResponseBody String greetingAxolotl() {
-		return "glub glub glub!";
+		return "glub! glub! glub!";
+	}
+
+    @RequestMapping("/box")
+	public @ResponseBody String greetingBox() {
+		return "What's in the box?";
 	}
 }

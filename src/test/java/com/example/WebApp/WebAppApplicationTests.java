@@ -40,4 +40,12 @@ class WebAppApplicationTests {
 						.andExpect(content()
 								.string(containsString("glub glub glub!")));
 	}
+
+	@Test
+	public void shouldReturnGlub() throws Exception {
+		this.mockMvc.perform(get("box"))
+						.andDo(print()).andExpect(status().isOk())
+						.andExpect(content()
+								.string(containsString("What's in the box?")));
+	}
 }
