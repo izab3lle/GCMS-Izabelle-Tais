@@ -17,7 +17,7 @@ public class HomeController {
 	
 	@RequestMapping("/axolotl")
 	public @ResponseBody String greetingAxolotl() {
-		return "glub glob glub!";
+		return "glub! glub! glub!";
 	}
 	
 	@RequestMapping("/lorem")
@@ -25,5 +25,10 @@ public class HomeController {
 		return "Lorem ipsum dolor sit amet, consectetur"
 				+ " adipiscing elit, sed do eiusmod tempor"
 				+ " incididunt ut labore et dolore magna aliqua.";
+	}
+
+    @RequestMapping("/box")
+	public @ResponseBody String greetingBox() {
+		return "What's in the box?";
 	}
 }
