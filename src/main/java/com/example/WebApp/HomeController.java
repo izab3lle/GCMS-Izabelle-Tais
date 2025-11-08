@@ -33,8 +33,13 @@ public class HomeController {
 		return "What's in the box?";
 	}
     
+    @RequestMapping("/hotfix")
+	public @ResponseBody String greetingHotfix() {
+		return "Hello, hotfix!";
+	}
+    
     @RequestMapping("/parOuImpar/{num}")
 	public @ResponseBody String greetingOddEven(@PathVariable int num) {
     	return num + " é " + ((num % 2 == 0) ? "par": "ímpar");
-	}
+    }
 }

@@ -66,10 +66,18 @@ class WebAppApplicationTests {
 	}
 	
 	@Test
-	public void shouldReturnIMpar() throws Exception {
+	public void shouldReturnImpar() throws Exception {
 		this.mockMvc.perform(get("/parOuImpar/33"))
 						.andDo(print()).andExpect(status().isOk())
 						.andExpect(content()
 								.string(containsString("33 é ímpar")));
+	}
+	
+	public void shouldReturnHotfix() throws Exception {
+		this.mockMvc.perform(get("/hotfix"))
+						.andDo(print()).andExpect(status().isOk())
+						.andExpect(content()
+								.string(containsString("Hello, hotfix!")));
+
 	}
 }
