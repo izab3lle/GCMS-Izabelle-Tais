@@ -51,9 +51,25 @@ class WebAppApplicationTests {
 
 	@Test
 	public void shouldReturnBox() throws Exception {
-		this.mockMvc.perform(get("box"))
+		this.mockMvc.perform(get("/box"))
 						.andDo(print()).andExpect(status().isOk())
 						.andExpect(content()
 								.string(containsString("What's in the box?")));
+	}
+	
+	@Test
+	public void shouldReturnPar() throws Exception {
+		this.mockMvc.perform(get("/parOuImpar/12"))
+						.andDo(print()).andExpect(status().isOk())
+						.andExpect(content()
+								.string(containsString("12 é par")));
+	}
+	
+	@Test
+	public void shouldReturnIMpar() throws Exception {
+		this.mockMvc.perform(get("/parOuImpar/33"))
+						.andDo(print()).andExpect(status().isOk())
+						.andExpect(content()
+								.string(containsString("33 é ímpar")));
 	}
 }

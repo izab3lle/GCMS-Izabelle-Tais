@@ -1,5 +1,6 @@
 package com.example.WebApp;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -17,7 +18,7 @@ public class HomeController {
 	
 	@RequestMapping("/axolotl")
 	public @ResponseBody String greetingAxolotl() {
-		return "glub! glub! glub!";
+		return "glub glob glub!";
 	}
 	
 	@RequestMapping("/lorem")
@@ -30,5 +31,10 @@ public class HomeController {
     @RequestMapping("/box")
 	public @ResponseBody String greetingBox() {
 		return "What's in the box?";
+	}
+    
+    @RequestMapping("/parOuImpar/{num}")
+	public @ResponseBody String greetingOddEven(@PathVariable int num) {
+    	return num + " é " + ((num % 2 == 0) ? "par": "ímpar");
 	}
 }
