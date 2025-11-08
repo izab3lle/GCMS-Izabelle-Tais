@@ -31,4 +31,9 @@ public class HomeController {
 	public @ResponseBody String greetingBox() {
 		return "What's in the box?";
 	}
+    
+    @RequestMapping("/hotfix")
+	public @ResponseBody String greetingHotfix() {
+		return "Hello, hotfix!";
+	}
 }

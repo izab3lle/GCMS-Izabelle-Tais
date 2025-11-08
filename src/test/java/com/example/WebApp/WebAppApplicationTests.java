@@ -56,4 +56,12 @@ class WebAppApplicationTests {
 						.andExpect(content()
 								.string(containsString("What's in the box?")));
 	}
+	
+	@Test
+	public void shouldReturnHotfix() throws Exception {
+		this.mockMvc.perform(get("/hotfix"))
+						.andDo(print()).andExpect(status().isOk())
+						.andExpect(content()
+								.string(containsString("Hello, hotfix!")));
+	}
 }
