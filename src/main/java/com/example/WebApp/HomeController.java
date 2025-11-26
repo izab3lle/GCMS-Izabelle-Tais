@@ -35,7 +35,7 @@ public class HomeController {
     
     @RequestMapping("/hotfix")
 	public @ResponseBody String greetingHotfix() {
-		return "Hello, hotfix!";
+		return "Hello, coldfix!";
 	}
     
     @RequestMapping("/parOuImpar/{num}")
