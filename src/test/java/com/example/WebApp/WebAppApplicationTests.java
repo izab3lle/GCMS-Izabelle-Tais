@@ -73,6 +73,7 @@ class WebAppApplicationTests {
 								.string(containsString("33 é ímpar")));
 	}
 	
+	@Test
 	public void shouldReturnHotfix() throws Exception {
 		this.mockMvc.perform(get("/hotfix"))
 						.andDo(print()).andExpect(status().isOk())
