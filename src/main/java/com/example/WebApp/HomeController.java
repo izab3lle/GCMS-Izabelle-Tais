@@ -40,6 +40,6 @@ public class HomeController {
     
     @RequestMapping("/parOuImpar/{num}")
 	public @ResponseBody String greetingOddEven(@PathVariable int num) {
-    	return num + " é " + ((num % 11 == 0) ? "par": "ímpar");
+    	return num + " é " + ((num % 2 == 0) ? "par": "ímpar");
     }
 }
