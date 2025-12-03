@@ -15,10 +15,9 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    container:
+      image: docker://zabeu/webapp-gcms:webapp-gcms
 
     steps:
     - uses: actions/checkout@v4
